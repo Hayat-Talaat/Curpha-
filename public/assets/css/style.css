@@ -1,0 +1,91 @@
+.saved {
+  animation: saved 1.5s linear;
+}
+
+.delete {
+  float: right;
+}
+
+.config-saved-row .edit, .config-saved-row .delete, .config-saved-row .configuration, .config-saved-row .grade {
+  display: inline-block;
+}
+.config-saved-row .add, .config-saved-row .save, .config-saved-row .config-select, .config-saved-row .grade-select {
+  display: none;
+}
+
+.config-new-row .save, .config-new-row .edit, .config-new-row .delete {
+  display: none;
+}
+.config-new-row .add {
+  display: inline-block;
+}
+
+.config-new-row td, .config-new-row th {
+  border-bottom: 2px solid #999 !important;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.editing .save, .editing .delete {
+  display: inline-block;
+}
+.editing .config-select, .editing .grade-select {
+  display: block;
+}
+.editing .add, .editing .edit, .editing .configuration, .editing .grade {
+  display: none;
+}
+
+@keyframes saved {
+  0% {
+    background: #dff0d8;
+  }
+  50% {
+    background: #dff0d8;
+  }
+  100% {
+    background: #fff;
+  }
+}
+
+/* Edit 
+table .table.table-bordered .config-table {
+    border: 1px solid #fff;
+    background: #fff
+}
+.config-table thead tr th {
+    color:#797979 !important;
+} 
+.config-table tbody  {
+    background: #36404a;
+    color: #797979
+}
+.config-table tbody th  {
+    background: #36404a;
+    color: #797979
+}
+
+
+
+button.edit.btn.btn-warning.btn-xs {
+    background: #5fbeaa !important;
+    border: 1px solid #72c1b0 !important;
+    color: #797979 !important;
+    width: 40%;
+}
+
+tbody > tr.config-new-row.active > td {
+    background-color: #6f7579 !important;
+
+}
+tbody > tr.config-new-row.active > th {
+    background-color: #6f7579 !important;
+}
+
+button.add.btn.btn-success.btn-xs {
+    background-color: #141829 !important;
+    border: 1px solid #fff !important;
+    width: 70%;
+}
+
+*/

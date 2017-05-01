@@ -1,0 +1,342 @@
+{% extends "layouts/layout-dashboard.twig" %}
+
+{# Set page properties (page.*) here. #}
+{% block page %}
+    {# By putting this in a special block, we ensure that it will be set AFTER the default values are set in the parent template, 
+    but BEFORE the page itself is rendered. #}    
+    {% set page = page | merge({
+        "title"       : "Zerg",
+        "description" : "Dedicated to the pursuit of genetic perfection, the zerg relentlessly hunt down and assimilate advanced species across the galaxy, incorporating useful genetic code into their own."
+    }) %}
+    {{ parent() }}
+{% endblock %}
+
+
+
+{% block content %}
+    
+    <div class="content-page">
+        <div class="content">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>Configuration</h1>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                               Set your configuration.
+                            </div>
+                        </div>
+
+                        <table class="table table-bordered config-table"
+                               style="background: #fff; 
+                                      border:1px solid rgba(95, 190, 170, 0.13);
+                                      color:#797979;">
+                        <thead style="color:#797979;">
+                            <tr style="color:#797979;">
+                                <th style="color:#797979;">Wifi Name</th>
+                                <th style="color:#797979;">Test</th>
+                                <th style="color:#797979;">Test</th>
+                                <th style="color:#797979;">Test</th>
+                                <th style="color:#797979;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody style="background: #f6f9fb;color: #797979;">
+                            <tr class="config-saved-row">
+                                <th style="background: #f6f9fb;color: #797979;">Test</th>
+                                <td>
+                                    test
+                                </td>
+                                <td>
+                                    <span class="configuration" data-course-code="C2">
+                                        config 2
+                                    </span>
+                                    <select class="config-select form-control input-sm" name="configuration">
+                                        <option value="" data-credits="">- Select Course -</option>
+                                        <option data-credits="4" value="C1">Config 1</option>
+                                        <option data-credits="12" value="C2" selected>config 2</option>
+                                        <option data-credits="8" value="C3">config 3</option>
+                                        <option data-credits="2" value="C4">config 4</option>
+                                        <option data-credits="3" value="C5">config 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="grade" data-grade-val="Pass">config</span>
+                                    <select name="" id="" class="grade-select form-control input-sm">
+                                        <option value="">- Select config -</option>
+                                        <optgroup label="Pass/Fail">
+                                            <option value="Pass" selected>config 1 </option>
+                                            <option value="Fail">config 2</option>
+                                        </optgroup>
+                                        <optgroup label="Letter Grade">
+                                            <option value="A+">A</option>
+                                            <option value="A">A</option>
+                                            <option value="A-">A</option>
+                                            <option value="B+">B</option>
+                                            <option value="B">B</option>
+                                            <option value="B-">B</option>
+                                            <option value="C+">C</option>
+                                            <option value="C">C</option>
+                                            <option value="D">D</option>
+                                            <option value="F">F</option>
+                                        </optgroup>
+                                        <optgroup label="Other">
+                                            <option value="Audit">config </option>
+                                            <option value="Withdrawl">config</option>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button class="add btn btn-success btn-xs">Add config</button>
+                                    <button class="edit btn btn-warning btn-xs">Edit</button>
+                                    <button class="save btn btn-primary btn-xs">Save</button>
+                                    <button class="delete btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                </td>
+                            </tr>
+                            <tr class="config-saved-row">
+                                <th style="background: #f6f9fb;color: #797979;">test</th>
+                                <td>test</td>
+                                <td>
+                                    <span class="configuration" data-course-code="C4">config 4</span>
+                                    <select class="config-select form-control input-sm" name="configuration">
+                                        <option value="" data-credits="">- Select config -</option>
+                                        <option data-credits="4" value="C1">config 1</option>
+                                        <option data-credits="12" value="C2">config 2</option>
+                                        <option data-credits="8" value="C3">config 3</option>
+                                        <option data-credits="2" value="C4" selected>config 4</option>
+                                        <option data-credits="3" value="C5">config 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="grade" data-grade-val="A-">A-</span>
+                                    <select name="" id="" class="grade-select form-control input-sm">
+                                        <option value="">- Select Grade -</option>
+                                        <optgroup label="Pass/Fail">
+                                            <option value="Pass">Pass</option>
+                                            <option value="Fail">Fail</option>
+                                        </optgroup>
+                                        <optgroup label="Letter Grade">
+                                            <option value="A+">A+</option>
+                                            <option value="A">A</option>
+                                            <option value="A-" selected>A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B">B</option>
+                                            <option value="B-">B-</option>
+                                            <option value="C+">C+</option>
+                                            <option value="C">C</option>
+                                            <option value="D">D</option>
+                                            <option value="F">F</option>
+                                        </optgroup>
+                                        <optgroup label="Other">
+                                            <option value="Audit">Audit</option>
+                                            <option value="Withdrawl">Withdrawl</option>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button class="add btn btn-success btn-xs">Add Grade</button>
+                                    <button class="edit btn btn-warning btn-xs">Edit</button>
+                                    <button class="save btn btn-primary btn-xs">Save</button>
+                                    <button class="delete btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                </td>
+                            </tr>
+                            <tr class="config-new-row active">
+                                <th style="background: #f6f9fb;color: #797979;">config</th>
+                                <td>
+                                    <span class="configuration" data-course-code=""></span>
+                                    <input type="text" class="config-select form-control input-sm" name="configuration" />
+                                </td>
+                                <td>
+                                    <span class="configuration" data-course-code=""></span>
+                                    <select class="config-select form-control input-sm" name="configuration">
+                                        <option value="" data-credits="">- Select config -</option>
+                                        <option data-credits="4" value="C1">config 1</option>
+                                        <option data-credits="12" value="C2">config 2</option>
+                                        <option data-credits="8" value="C3">config 3</option>
+                                        <option data-credits="2" value="C4">config 4</option>
+                                        <option data-credits="3" value="C5">config 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="grade"></span>
+                                    <select name="" id="" class="grade-select form-control input-sm">
+                                        <option value="">- Select config -</option>
+                                        <optgroup label="Pass/Fail">
+                                            <option value="Pass">ok</option>
+                                            <option value="Fail">done</option>
+                                        </optgroup>
+                                        <optgroup label="Letter Grade">
+                                            <option value="A+">A</option>
+                                            <option value="A">A</option>
+                                            <option value="A-">A</option>
+                                            <option value="B+">B</option>
+                                            <option value="B">B</option>
+                                            <option value="B-">B</option>
+                                            <option value="C+">C</option>
+                                            <option value="C">C</option>
+                                            <option value="D">D</option>
+                                            <option value="F">F</option>
+                                        </optgroup>
+                                        <optgroup label="Other">
+                                            <option value="Audit">config</option>
+                                            <option value="Withdrawl">config</option>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button class="add btn btn-success btn-xs">Add config</button>
+                                    <button class="edit btn btn-warning btn-xs">Edit</button>
+                                    <button class="save btn btn-primary btn-xs">Save</button>
+                                    <button class="delete btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                </td>
+                            </tr>
+                            <tr class="config-saved-row">
+                                <th style="background: #f6f9fb;color: #797979;">test</th>
+                                <td>config</td>
+                                <td>
+                                    <span class="configuration" data-course-code="C3">config 3</span>
+                                    <select class="config-select form-control input-sm" name="configuration">
+                                        <option value="">- Select config -</option>
+                                        <option data-credits="4" value="C1">config 1</option>
+                                        <option data-credits="12" value="C2">config 2</option>
+                                        <option data-credits="8" value="C3" selected>config 3</option>
+                                        <option data-credits="2" value="C4">config 4</option>
+                                        <option data-credits="3" value="C5">config 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="grade" data-grade-val="B+">B</span>
+                                    <select name="" id="" class="grade-select form-control input-sm">
+                                        <option value="">- Select config -</option>
+                                        <optgroup label="Pass/Fail">
+                                            <option value="Pass">done</option>
+                                            <option value="Fail">ok</option>
+                                        </optgroup>
+                                        <optgroup label="Letter Grade">
+                                            <option value="A+">A</option>
+                                            <option value="A">A</option>
+                                            <option value="A-">A</option>
+                                            <option value="B+" selected>B</option>
+                                            <option value="B">B</option>
+                                            <option value="B-">B</option>
+                                            <option value="C+">C</option>
+                                            <option value="C">C</option>
+                                            <option value="D">D</option>
+                                            <option value="F">F</option>
+                                        </optgroup>
+                                        <optgroup label="Other">
+                                            <option value="Audit">config</option>
+                                            <option value="Withdrawl">test</option>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button class="add btn btn-success btn-xs">Add config</button>
+                                    <button class="edit btn btn-warning btn-xs">Edit</button>
+                                    <button class="save btn btn-primary btn-xs">Save</button>
+                                    <button class="delete btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                </td>
+                            </tr>
+                            <tr class="config-saved-row">
+                                <th style="background: #f6f9fb;color: #797979;">test</th>
+                                <td>config</td>
+                                <td>
+                                    <span class="configuration" data-course-code="C1">config 1</span>
+                                    <select class="config-select form-control input-sm" name="configuration">
+                                        <option value="">- Select config -</option>
+                                        <option data-credits="4" value="C1" selected>Course 1</option>
+                                        <option data-credits="12" value="C2">config 2</option>
+                                        <option data-credits="8" value="C3">config 3</option>
+                                        <option data-credits="2" value="C4">config 4</option>
+                                        <option data-credits="3" value="C5">config 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="grade" data-grade-val="A+">A</span>
+                                    <select name="" id="" class="grade-select form-control input-sm">
+                                        <option value="">- Select config -</option>
+                                        <optgroup label="Pass/Fail">
+                                            <option value="Pass">done</option>
+                                            <option value="Fail">Fail</option>
+                                        </optgroup>
+                                        <optgroup label="Letter Grade">
+                                            <option value="A+" selected>A</option>
+                                            <option value="A">A</option>
+                                            <option value="A-">A</option>
+                                            <option value="B+">B</option>
+                                            <option value="B">B</option>
+                                            <option value="B-">B</option>
+                                            <option value="C+">C</option>
+                                            <option value="C">C</option>
+                                            <option value="D">D</option>
+                                            <option value="F">F</option>
+                                        </optgroup>
+                                        <optgroup label="Other">
+                                            <option value="Audit">test</option>
+                                            <option value="Withdrawl">config</option>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button class="add btn btn-success btn-xs">Add config</button>
+                                    <button class="edit btn btn-warning btn-xs">Edit</button>
+                                    <button class="save btn btn-primary btn-xs">Save</button>
+                                    <button class="delete btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                </td>
+                            </tr>
+                            <tr class="config-new-row active">
+                                <th style="background: #f6f9fb;color: #797979;">test</th>
+                                <td>config</td>
+                                <td>
+                                    <span class="configuration" data-course-code=""></span>
+                                    <select class="config-select form-control input-sm" name="configuration">
+                                        <option value="">- Select config -</option>
+                                        <option data-credits="4" value="C1">config 1</option>
+                                        <option data-credits="12" value="C2">config 2</option>
+                                        <option data-credits="8" value="C3">config 3</option>
+                                        <option data-credits="2" value="C4">config 4</option>
+                                        <option data-credits="3" value="C5">config 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="grade"></span>
+                                    <select name="" id="" class="grade-select form-control input-sm">
+                                        <option value="">- Select config -</option>
+                                        <optgroup label="Pass/Fail">
+                                            <option value="Pass">done</option>
+                                            <option value="Fail">Fail</option>
+                                        </optgroup>
+                                        <optgroup label="Letter Grade">
+                                            <option value="A+">A</option>
+                                            <option value="A">A</option>
+                                            <option value="A-">A</option>
+                                            <option value="B+">B</option>
+                                            <option value="B">B</option>
+                                            <option value="B-">B</option>
+                                            <option value="C+">C</option>
+                                            <option value="C">C</option>
+                                            <option value="D">D</option>
+                                            <option value="F">F</option>
+                                        </optgroup>
+                                        <optgroup label="Other">
+                                            <option value="Audit">config</option>
+                                            <option value="Withdrawl">test</option>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button class="add btn btn-success btn-xs">Add config</button>
+                                    <button class="edit btn btn-warning btn-xs">Edit</button>
+                                    <button class="save btn btn-primary btn-xs">Save</button>
+                                    <button class="delete btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    
+                </div>
+            </div> 
+        </div> 
+    </div>
+{% endblock %}

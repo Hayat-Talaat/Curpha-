@@ -1,0 +1,57 @@
+.panel{
+    border: 2px solid #5FBEAA;
+}
+.panel-body{
+    overflow-x: auto;
+}
+.panel-heading{
+    background-color: #5FBEAA;  
+    color: #FFF;
+    font-size: 20px;
+}
+td input{
+    width: 100%;
+    box-shadow: 2px 2px 0px 0px;
+}
+tr label,tr .mail{
+    color: #5d9cec
+}
+tr i{ color: gray}
+.new-user{
+    background-color: #5FBEAA !important;
+    margin:0 0 5px 5px;
+}
+.glyphicon-envelope{
+    color: #5d9cec;
+}
+.gro{
+    font-weight: normal;
+}
+.well{
+    margin: 0px !important;
+    line-height: 0;
+}
+.modal-body .input-title{
+    padding-top: 10px !important;
+}
+.glyphicon-home{
+    padding: 10px;
+    border: 1px solid #DDD;
+}
+.blue{
+    color: #FFF;
+    background-color: #5d9cec
+}
+.create{
+    background-color: #5FBEAA !important;
+    font-size: 20px;
+    padding: 5px 30px;
+}
+.cancel{
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+.delete{
+    margin-top: 10px;
+}
